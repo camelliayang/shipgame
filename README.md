@@ -1,19 +1,5 @@
-# React Battle ship Challenge
+# React Battle ship
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Requirement and explanation
-- [ ] Managing multiple players
-- [x] Reading user input (Did a simple table one)
-- [x] Playing a game(Sorry already did it in order to test) 
-
-An attack should result in the new state of the board along with one of the following outcomes:
-- [x] ʻHitʼ if there is a ship occupying the position
-- [x] ʻMissʼ if no ship occupies the position---Can add a limit for missed times
-- [ ] ʻAlready Attackedʼ if the position has previously been attacked ---Can add this in the state also but I'm using a table to check it, not useful right now.
-- [x] ʻSunkʼ if the attack hits the last remaining position of a ship 
-- [ ] ʻWinʼ if the attack sinks the last remaining ship---Have this message and can be extended when we have multiple players
-
-(Using react hooks and redux to manage states. Just want to practice using this way rather than class component and setStates)
 
 ## How to run the project
 
@@ -50,7 +36,7 @@ Once you win the game, you will see:
 `You sank all my battleships! You won!`
 
 ## Testing
-Planning to use Jest testing but the time is up.
+Planning to use Jest testing
 
 ## Todo
 1. User table input checks. Since input is not a must in requirement, didn't check the bad input
@@ -60,3 +46,4 @@ Planning to use Jest testing but the time is up.
 5. Add missed number limitation
 6. Change to better UI
 7. Add backend services, store and fetch data etc.
+8. Add multiple players
