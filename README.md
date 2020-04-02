@@ -1,68 +1,62 @@
+# React Battle ship Challenge
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Requirement and explanation
+- [ ] Managing multiple players
+- [x] Reading user input (Did a simple table one)
+- [x] Playing a game(Sorry already did it in order to test) 
 
-In the project directory, you can run:
+An attack should result in the new state of the board along with one of the following outcomes:
+- [x] ʻHitʼ if there is a ship occupying the position
+- [x] ʻMissʼ if no ship occupies the position---Can add a limit for missed times
+- [ ] ʻAlready Attackedʼ if the position has previously been attacked ---Can add this in the state also but I'm using a table to check it, not useful right now.
+- [x] ʻSunkʼ if the attack hits the last remaining position of a ship 
+- [ ] ʻWinʼ if the attack sinks the last remaining ship---Have this message and can be extended when we have multiple players
 
-### `npm start`
+(Using react hooks and redux to manage states. Just want to practice using this way rather than class component and setStates)
 
-Runs the app in the development mode.<br />
+## How to run the project
+
+First in the project directory please run:
+`npm i`
+
+Then you can run:
+`npm start`
+
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Game Instructions
+The default board numbers are:
+  board size: 4
+  numShips: 3
+  shipLength: 2
 
-### `npm test`
+Once you decide the row and column number, just input it and click `Fire`
+You will see the message and decide the next move.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If you miss any move, you will see:
+`You missed`
 
-### `npm run build`
+If you hit any ship, you will see:
+`HIT`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you already hit that location and fire again, you will see:
+`Oops, you already hit that location`
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+If you sank one ship, you will see:
+`You sank my battleship!`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Once you win the game, you will see:
+`You sank all my battleships! You won!`
 
-### `npm run eject`
+## Testing
+Planning to use Jest testing but the time is up.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Todo
+1. User table input checks. Since input is not a must in requirement, didn't check the bad input
+2. Unit tests, eslint, etc.
+3. UI component storybook
+4. Some error/warning fixes in the code, added TODO already
+5. Add missed number limitation
+6. Change to better UI
+7. Add backend services, store and fetch data etc.
